@@ -1,0 +1,33 @@
+{
+  "name": "react-native-text-input-material-swift-ui",
+  "version": "1.0.0",
+  "description": "A TextInput component customized to appear in material design on android e swift ui in ios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gioeleber/react-native-text-input-material-swift-ui.git"
+  },
+  "keywords": [
+    "reactnative",
+    "react",
+    "native",
+    "text",
+    "input",
+    "textinput",
+    "material",
+    "materialdesign",
+    "swiftui",
+    "hybid",
+    "android",
+    "ios"
+  ],
+  "author": "Gioele Bernardi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gioeleber/react-native-text-input-material-swift-ui/issues"
+  },
+  "homepage": "https://github.com/gioeleber/react-native-text-input-material-swift-ui#readme"
+}
