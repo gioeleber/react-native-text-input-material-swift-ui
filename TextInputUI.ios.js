@@ -16,7 +16,6 @@ export default props => {
       borderBottomWidth: props.isLast? 1 : 0,
       fontSize: 15,
       fontFamily: props.fontFamily || 'System',
-      
       marginHorizontal: - paddingHorizontal
     },
     dividerContainer: {
@@ -41,7 +40,7 @@ export default props => {
       placeholderTextColor={
         props.isDarkMode? 'gray' : '#C3C3C3'
       }
-      style={styles.input}
+      style={{...styles.input, ...props.style}}
     />
     <View style={styles.dividerContainer}>
       <View style={styles.divider} />

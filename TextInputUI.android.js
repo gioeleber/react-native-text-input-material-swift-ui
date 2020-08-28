@@ -11,18 +11,15 @@ export default props => {
   const [ isFocused, setIsFocused ] = useState(false)
   
   // references
-  const animatedIsFocused = useRef(new Animated.Value(
-    props.value !== '' || props.value || props.defaultValue? 1 : 0)
+  const animatedIsFocused = useRef(new Animated.Value(0)
   ).current
 
   // funcs
-  useEffect(() => {
-    Animated.timing(animatedIsFocused, {
-      toValue: isFocused || props.value || props.defaultValue ? 1 : 0,
-      duration: 200,
-      useNativeDriver: false,
-    }).start();
-  }, [isFocused, props.value])
+  Animated.timing(animatedIsFocused, {
+    toValue: isFocused || props.value || props.defaultValue ? 1 : 0,
+    duration: 200,
+    useNativeDriver: false
+  }).start();
 
   // styles
   const styles = {
@@ -70,13 +67,19 @@ export default props => {
   }
 
   return (
-    <View style={styles.container}>
-      <Animated.Text style={styles.label}>
+    <View style={{
+      ...styles.container,
+      ...props.stylesContainer
+    }}>
+      <Animated.Text style={{
+        ...styles.label,
+        ...props.stylesLabel
+      }}>
         {props.label}
       </Animated.Text>
       <TextInput
         {...props}
-        style={styles.input}
+        style={{...styles.input, ...props.style}}
         onFocus={() => {setIsFocused(true)}}
         onBlur={() => {setIsFocused(false)}}
       />

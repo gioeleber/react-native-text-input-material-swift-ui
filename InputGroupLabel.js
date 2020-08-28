@@ -17,6 +17,8 @@ export default props => {
   }
 
   return (
-    <Text style={styles.label}>{props.children}</Text>
+    <Text style={{...styles.label, ...props.style}} {...props}>
+      {props.children}
+    </Text>
   )
 }

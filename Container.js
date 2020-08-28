@@ -20,7 +20,12 @@ export default props => {
   }
 
   return (
-    <ScrollView contentContainerStyle={{...styles.scrollContainer}}>
+    <ScrollView
+      contentContainerStyle={{
+        ...styles.scrollContainer,
+        ...props.style}}
+      {...props}
+    >
       {props.children}
     </ScrollView>
   )
