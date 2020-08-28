@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Platform, Text } from 'react-native'
 
 export default props => {
-  console.log(props.isDarkMode)
   const styles = {
     label: {
       textTransform: Platform.OS === 'ios'?'uppercase': 'none',
