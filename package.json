@@ -1,6 +1,6 @@
 {
   "name": "react-native-text-input-material-swift-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A TextInput component customized to appear in material design on android e swift ui in ios",
   "main": "index.js",
   "scripts": {
